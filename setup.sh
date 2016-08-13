@@ -1,3 +1,3 @@
 npm install --production
 mkdir -p config
-cp /etc/bl-message-board.json config/default.json
+cp /etc/configs/bl-message-board.json config/default.json
