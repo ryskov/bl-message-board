@@ -4,6 +4,7 @@ const express = require('express');
 const config = require('config');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 let app = new express();
 const mysqlConf = config.get('mysql');
@@ -15,17 +16,21 @@ let dbConn = mysql.createConnection({
     database: 'messageboard'
 });
 
+app.use(cors());
+
 app.use(bodyParser.json());
 app.use(express.static('build'));
 
+app.disable('etag');
+
 app.get('/messages', (req, res) => {
-    dbConn.query("SELECT * FROM messages", (err, rows) => {
+    dbConn.query("SELECT * FROM messages ORDER BY id DESC", (err, rows) => {
         if (err) {
             res.statusCode = 500;
             res.send(err);
         }
 
-        res.send({data: rows});
+        res.status(200).send({data: rows});
     });
 });
 
@@ -49,10 +54,10 @@ app.get('/users', (req, res) => {
     dbConn.query("SELECT * FROM users", (err, rows) => {
         if (err) {
             res.statusCode = 500;
-            res.send(err);
+            res.send(err);        
         }
 
-        res.send({data: rows});
+        res.status(200).send({data: rows});
     });
 });
 
