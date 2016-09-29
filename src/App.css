@@ -1,3 +1,10 @@
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+}
+
 .app {
   text-align: center;
   height: 100%;
@@ -12,7 +19,7 @@
   right: 0px;
   overflow: hidden;
   background-color: #222;
-  height: 70px;
+  height: 50px;
   padding: 10px;
   color: white;
 }
@@ -20,7 +27,7 @@
 .app-body {
   background-color: rgba(0, 0, 0, 0.05);
   position: absolute;
-  top: 90px;
+  top: 70px;
   bottom: 0px;
   left: 0px;
   right: 0px;
@@ -50,71 +57,8 @@
   margin-bottom: 20px;
 }
 
-.message-input {
-  border-radius: 3px;
-  box-shadow: 3px 3px 2px -2px rgba(0,0,0,0.2);
-  text-align: center;
-  resize: none;
-  border: none;
-  
-  background-color: rgba(0, 0, 0, 0.03);
-  height: 50px;
-  width: 292px;
-  padding: 10px;
-  font-family: helvetica;
-}
-
-.message-input:focus {
-  text-align: left;
-  border-bottom: 1px solid #F8FFA8;
-  height: 49px;
-  outline: none;
-}
-
-.message-container {
-  border-radius: 3px;
-  box-shadow: 3px 3px 2px -2px rgba(0,0,0,0.2);
-  width: 302px;
-  background-color: rgba(0, 0, 0, 0.03);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  padding: 5px;
-  
-}
-
 .posting-as {
   margin-top: 5px;
-}
-
-.message-author-info {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 5px;
-  height: 50px;
-  margin-bottom: 0px;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: small;
-  font-weight: bold;
-  
-}
-
-.message-text {
-  padding-top: 5px;
-  text-align: left;
-  font-size: small;
-  white-space: pre-wrap;
-}
-
-.message-author-name {
-  float: right;
-  text-align: right;
-}
-
-.message-time {
-  text-align: right;
-  margin-top: 10px;
 }
 
 .italic {

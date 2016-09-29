@@ -1,0 +1,22 @@
+.text-input {
+  border-radius: 3px;
+  box-shadow: 3px 3px 2px -2px rgba(0,0,0,0.2);
+  text-align: center;
+  resize: none;
+  border: none;
+  
+  background-color: rgba(0, 0, 0, 0.03);
+  height: 50px;
+  width: 292px;
+  padding: 10px;
+  font-family: helvetica;
+  white-space: pre-wrap;
+}
+
+.text-input:focus {
+  text-align: left;
+  border-bottom: 1px solid #F8FFA8;
+  box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.2);
+  height: 49px;
+  outline: none;
+}

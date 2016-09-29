@@ -3,8 +3,8 @@
 export default class HTTPHelper {
 
     static getUrl() {
-        //return window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + (parseInt(window.location.port, 10) + 1) : '');
-        return window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+        return window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + (parseInt(window.location.port, 10) + 1) : '');
+        //return window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
     }
 
     static post(uri, data, baseUrl) {
